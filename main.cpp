@@ -13,6 +13,10 @@
 #include "FilterNonPositive.h"
 #include "FilterForTwoDigitPositive.h"
 
+#include "ReduceGeneric.h"
+#include "ReduceGCD.h"
+#include "ReduceMinimum.h"
+
 using namespace std;
 
 int main(){
@@ -20,6 +24,8 @@ int main(){
 
     vector<int> userInput;
     vector<int> resultVector;
+    int resultG;
+    int resultM;
 
     //create map objects
     MapGeneric* mapT = new MapTriple();
@@ -30,6 +36,11 @@ int main(){
     FilterGeneric* filterO = new FilterOdd();
     FilterGeneric* filterNP = new FilterNonPositive();
     FilterGeneric* filterTDP = new FilterForTwoDigitPositive();
+
+    //create reduce objects
+    ReduceGeneric* reduceGCD = new ReduceGCD();
+    ReduceGeneric* reduceM = new ReduceMinimum();
+
 
     //get input from user
     cout<<"Enter numbers:";
@@ -76,18 +87,23 @@ int main(){
     // resultVector = filterNP->filter(userInput);
     // cout<<"filter non-positive"<<endl;
 
-    resultVector = filterTDP->filter(userInput);
-    cout<<"filter two digit positive"<<endl;
+    // resultVector = filterTDP->filter(userInput);
+    // cout<<"filter two digit positive"<<endl;
 
 
-    for(int i=0; i<resultVector.size(); i++){
-        if (resultVector[i]==1){
-            cout<<userInput[i]<<endl;
+    // for(int i=0; i<resultVector.size(); i++){
+    //     if (resultVector[i]==1){
+    //         cout<<userInput[i]<<endl;
 
-        }
-    }
+    //     }
+    // }
 
 
+    //REDUCE
+    resultG = reduceGCD->reduce(resultVector);
+    resultM = reduceM->reduce(resultVector);
+    
+    cout<<resultM<<" "<<resultG<<endl;
 
     // cout<<resultVector[2];
 
