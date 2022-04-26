@@ -3,7 +3,7 @@
 #include <vector>
 
 ReduceMinimum::ReduceMinimum():ReduceGeneric(){
-
+    x="min";
 }
 
 int ReduceMinimum::binaryOperator(int input, int input2){

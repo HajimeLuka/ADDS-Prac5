@@ -104,11 +104,11 @@ int main(){
     resultVector = mapA->map(resultVector);
     resultVector = filterO->filter(resultVector);
     resultVector = filterTDP->filter(resultVector);
-    resultG = reduceGCD->reduce(resultVector, "gcd");
-    resultM = reduceM->reduce(resultVector, "min");
+    resultG = reduceGCD->reduce(resultVector);
+    resultM = reduceM->reduce(resultVector);
 
 
-    if (resultM == 999999){
+    if (resultM == 99999){
         resultM = 0;
     }
 

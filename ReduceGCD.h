@@ -7,7 +7,7 @@ class ReduceGCD: public ReduceGeneric{
 public:
 
     ReduceGCD();
-    virtual int binaryOperator(int input, int input2);
+    virtual int binaryOperator(int input1, int input2);
 
 };
 
