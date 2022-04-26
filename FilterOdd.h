@@ -5,7 +5,7 @@
 using namespace std;
 
 class FilterOdd: public FilterGeneric{
-    public:
+public:
     FilterOdd();
     virtual bool g(int input);
 };

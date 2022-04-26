@@ -13,6 +13,4 @@ int ReduceMinimum::binaryOperator(int input, int input2){
     } else {
         return input2;
     }
-
 }
-

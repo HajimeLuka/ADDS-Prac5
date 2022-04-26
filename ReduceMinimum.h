@@ -12,3 +12,4 @@ class ReduceMinimum: public ReduceGeneric{
 };
 
 #endif
+

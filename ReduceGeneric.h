@@ -3,12 +3,14 @@
 #include "ReduceGeneric.h"
 
 #include <vector>
+#include <string>
+
 using namespace std;
 
 class ReduceGeneric{
     public:
     ReduceGeneric();
-    int reduce(vector<int> input);
+    int reduce(vector<int> input, string x);
     int output;
     int res=0;
     int count=0;
@@ -19,3 +21,4 @@ class ReduceGeneric{
 
 };
 #endif
+

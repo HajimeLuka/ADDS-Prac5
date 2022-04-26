@@ -1,18 +1,23 @@
 #ifndef FILTERGENERIC_H
 #define FILTERGENERIC_H
-#include <vector> 
+
+#include <vector>
+
 using namespace std;
 
-class FilterGeneric{
+class FilterGeneric {
     public:
-    FilterGeneric();
-    vector<int> filter(vector<int> input);
+
+
+    FilterGeneric ();
+    vector<int> filter(vector<int> inputVec);
     vector<int> output;
-    
-    int count=0;
-    int res=0;
-    
+
+    bool res = false;
+    int count = 0;
+
     private:
-    bool virtual g(int)=0;
+    virtual bool g(int input) = 0;
 };
+
 #endif

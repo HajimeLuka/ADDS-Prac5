@@ -1,6 +1,5 @@
 #include "FilterOdd.h"
 #include <iostream>
-#include <math.h>
 using namespace std;
 
 FilterOdd::FilterOdd():FilterGeneric(){

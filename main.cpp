@@ -100,12 +100,19 @@ int main(){
 
 
     //REDUCE
-    resultG = reduceGCD->reduce(resultVector);
-    resultM = reduceM->reduce(resultVector);
-    
-    cout<<resultM<<" "<<resultG<<endl;
+    resultVector = mapT->map(userInput);
+    resultVector = mapA->map(resultVector);
+    resultVector = filterO->filter(resultVector);
+    resultVector = filterTDP->filter(resultVector);
+    resultG = reduceGCD->reduce(resultVector, "gcd");
+    resultM = reduceM->reduce(resultVector, "min");
 
-    // cout<<resultVector[2];
+
+    if (resultM == 999999){
+        resultM = 0;
+    }
+
+    cout<<resultM<<" "<<resultG<<endl;
 
     return 0;
 }

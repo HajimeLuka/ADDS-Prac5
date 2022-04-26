@@ -8,26 +8,19 @@ FilterGeneric::FilterGeneric(){
 
 }
 
-vector<int> FilterGeneric::filter(vector<int> input){
-        // vector<int> Vect;
+vector<int> FilterGeneric::filter(vector<int> inputVec){
 
-    if (input.size()==0){
+    if (count == inputVec.size()){
         return output;
     }
 
-    if (count == input.size()){
-        return output;
+    res = g(inputVec[count]);
+
+    if (res){
+        output.push_back(inputVec[count]);
     }
+    count++;
 
-    else{
-        res = g(input[count]);
-
-        output.push_back(res);
-        count++;
-
-        // Vect.pop_back();
-
-        return filter(input);
-    }
+    return filter(inputVec);
 
 }

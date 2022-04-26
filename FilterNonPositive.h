@@ -9,4 +9,5 @@ class FilterNonPositive: public FilterGeneric{
     virtual bool g(int input);
 
 };
+
 #endif
