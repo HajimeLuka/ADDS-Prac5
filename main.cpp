@@ -43,7 +43,7 @@ int main(){
 
 
     //get input from user
-    cout<<"Enter numbers:";
+    // cout<<"Enter numbers:";
     getline(cin, input);
     stringstream str_strm;
 
